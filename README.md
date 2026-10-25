@@ -85,6 +85,20 @@ This is a simulation of federated learning rather than a deployment across physi
 | Weighted-F1 | 79.17% |
 
 These results correspond to the saved experiment using three clients, 20 communication rounds, 10 local epochs, and 34 input features.
+### Quantitative Comparison of Evaluated Models
+
+| Model | Accuracy | Macro-F1 |
+|---|---:|---:|
+| Centralized Neural Network | 74.37% | 70.99% |
+| IID FedAvg | 76.16% | 73.31% |
+| Non-IID FedAvg Baseline | 73.24% | 67.43% |
+| **Selected Non-IID FedAvg Model** | **79.37%** | **76.41%** |
+| Extra Trees | 90.96% | 87.30% |
+
+The selected non-IID FedAvg model improved on the initial non-IID FedAvg baseline by approximately 6.13 percentage points in accuracy and 8.98 percentage points in macro-F1. Extra Trees achieved higher scores, providing a useful centralized baseline for evaluating the trade-offs associated with federated learning.
+
+*Note: Results reflect the recorded experimental configurations and should be interpreted in the context of the same dataset split and evaluation protocol.*
+
 
 ### Baseline comparison
 
