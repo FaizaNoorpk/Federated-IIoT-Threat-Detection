@@ -189,3 +189,38 @@ Potential future work includes:
 ## Research Purpose
 
 This project is intended as a research and portfolio implementation for studying federated learning, network traffic classification, and IIoT cybersecurity. Reported performance represents experimental results and does not establish production readiness.
+## Experimental Results and Visualizations
+
+### 1. Model Performance Comparison
+
+The following figure compares the performance of the evaluated models, including the federated learning approaches and the Extra Trees baseline.
+
+![Model Performance Comparison](docs/figures/model_comparison.png)
+
+### 2. Best FedAvg Model: Confusion Matrix
+
+The confusion matrix shows the classification performance of the selected non-IID FedAvg model on the held-out test set.
+
+![FedAvg Confusion Matrix](docs/figures/fedavg_best_confusion_matrix.png)
+
+The selected model achieved:
+- **Accuracy:** 79.37%
+- **Macro-F1:** 76.41%
+- **Weighted-F1:** 79.17%
+
+### 3. Per-Class Performance
+
+This figure presents the F1-score for individual classes using the Extra Trees baseline, helping identify classes that are easier or more difficult to classify.
+
+![Extra Trees Per-Class F1](docs/figures/extra_trees_per_class_f1.png)
+
+### 4. Non-IID Federated Training
+
+The following figure shows the training accuracy across communication rounds for the non-IID federated learning experiment.
+
+![Non-IID FedAvg Training Accuracy](docs/figures/fedavg_noniid_training_accuracy.png)
+
+### Experimental Note
+
+The experiments use simulated federated clients created from the Edge-IIoTset dataset. The results are specific to the selected preprocessing, data split, model configuration, and random seed. The federated setup is a research simulation, not a deployment on physical IIoT devices.
+
